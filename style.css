@@ -1114,3 +1114,71 @@ a {
 .certificate-card:hover .certificate-img {
   transform: scale(1.05); /* Efek zoom tipis saat kursor diarahkan ke kartu */
 }
+/* VIDEO PROJECT LANDSCAPE 16:9 */
+.video-landscape {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  position: relative;
+  background: #090b12;
+}
+
+.video-landscape video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #090b12;
+}
+
+/* =================================
+   PENYESUAIAN PROJECT PORTOFOLIO
+================================= */
+
+/* Project 4: Posisi di tengah */
+.projects-grid .project-card:nth-child(4) {
+  grid-column: 1 / -1;
+  width: min(100%, 560px);
+  justify-self: center;
+}
+
+/* Video Project 4: Landscape 16:9 */
+.projects-grid .project-card:nth-child(4) .project-image-container {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  overflow: hidden;
+  background: #090b12;
+}
+
+.projects-grid .project-card:nth-child(4) video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #090b12;
+}
+
+/* Project 3: Gambar Portrait 3:4 */
+.projects-grid .project-card:nth-child(3) .project-image-container {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  height: auto;
+  overflow: hidden;
+  background: #090b12;
+}
+
+.projects-grid .project-card:nth-child(3) .project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsif untuk HP */
+@media (max-width: 600px) {
+  .projects-grid .project-card:nth-child(4) {
+    width: 100%;
+  }
+}
