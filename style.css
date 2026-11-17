@@ -1,3 +1,4 @@
+
 /* FADEL RAHMAT — DARK MODERN PORTFOLIO */
 
 :root {
@@ -55,6 +56,8 @@ a {
   color: transparent;
 }
 
+/* BACKGROUND EFFECT */
+
 .page-glow {
   position: fixed;
   z-index: -1;
@@ -77,6 +80,8 @@ a {
   bottom: 5%;
   left: -250px;
 }
+
+/* NAVBAR */
 
 .site-header {
   position: sticky;
@@ -159,9 +164,13 @@ a {
   background: var(--text);
 }
 
+/* GENERAL SECTION */
+
 .section {
   padding-block: 105px;
 }
+
+/* HERO */
 
 .hero {
   min-height: 660px;
@@ -273,6 +282,8 @@ a {
 .contact-links a:hover {
   color: var(--accent);
 }
+
+/* HERO VISUAL */
 
 .hero-visual {
   min-height: 400px;
@@ -398,6 +409,8 @@ a {
   border-radius: 5px;
 }
 
+/* SECTION HEADING */
+
 .section-heading {
   margin-bottom: 42px;
 }
@@ -407,6 +420,8 @@ a {
   font: 600 clamp(34px, 4.5vw, 52px)/1.15 var(--display);
   letter-spacing: -1.8px;
 }
+
+/* ABOUT */
 
 .about-grid {
   display: grid;
@@ -457,6 +472,8 @@ a {
   color: var(--muted);
   font-size: 11px;
 }
+
+/* SKILLS */
 
 .skills-grid {
   display: grid;
@@ -523,6 +540,8 @@ a {
   font-size: 10px;
 }
 
+/* TIMELINE */
+
 .timeline {
   max-width: 820px;
   margin-left: 7px;
@@ -584,6 +603,8 @@ a {
   margin-top: 8px;
 }
 
+/* PROJECTS */
+
 .section-heading-row {
   display: flex;
   justify-content: space-between;
@@ -610,144 +631,47 @@ a {
   transition: .25s;
 }
 
-.project-art {
-  aspect-ratio: 1.65;
+/* PROJECT IMAGE CONTAINER */
+
+.project-image-container {
   position: relative;
-  display: grid;
-  place-items: center;
+  width: 100%;
+  aspect-ratio: 1.65;
   overflow: hidden;
+  background-color: #15172b;
 }
 
-.project-art > span {
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform .3s ease;
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.03);
+}
+
+/* PROJECT BADGE */
+
+.project-badge {
   position: absolute;
   top: 15px;
   left: 16px;
-  color: #ffffff9c;
+  z-index: 3;
+  color: #ffffff;
   font: 9px var(--display);
   letter-spacing: 1.5px;
-}
-
-.art-purple {
-  background: radial-gradient(ellipse at 50% 80%, #6f59c6, #282346 60%, #191729);
-}
-
-.art-blue {
-  background: radial-gradient(ellipse at 80% 20%, #3b888d, #1b3344 65%, #15212b);
-}
-
-.art-window {
-  width: 62%;
-  height: 60%;
-  background: #15172b;
-  border: 1px solid #ffffff36;
-  border-radius: 8px;
-  padding: 13px;
-  transform: rotate(-4deg);
-  box-shadow: 0 15px 30px #0004;
-}
-
-.window-dots {
-  font-size: 7px;
-  color: #b2a3ff;
-  letter-spacing: 3px;
-}
-
-.art-line {
-  height: 6px;
-  width: 85%;
+  background: rgba(9, 11, 18, .7);
+  backdrop-filter: blur(4px);
+  padding: 4px 8px;
   border-radius: 4px;
-  background: #9f8dff;
-  margin-top: 15px;
+  border: 1px solid var(--line);
 }
 
-.art-line.short {
-  width: 50%;
-  margin-top: 7px;
-  background: #ffffff32;
-}
-
-.chart-bars {
-  height: 40px;
-  display: flex;
-  align-items: end;
-  gap: 7px;
-  margin-top: 10px;
-}
-
-.chart-bars i {
-  flex: 1;
-  height: 45%;
-  background: #9f8dff70;
-  border-radius: 3px 3px 0 0;
-}
-
-.chart-bars i:nth-child(2) {
-  height: 75%;
-}
-
-.chart-bars i:nth-child(3) {
-  height: 58%;
-  background: #79d9cc70;
-}
-
-.chart-bars i:nth-child(4) {
-  height: 100%;
-}
-
-.chart-bars i:nth-child(5) {
-  height: 65%;
-}
-
-.ui-preview {
-  width: 65%;
-  height: 62%;
-  display: flex;
-  gap: 8px;
-  padding: 10px;
-  background: #111b2a;
-  border: 1px solid #ffffff32;
-  border-radius: 8px;
-  transform: rotate(3deg);
-  box-shadow: 0 15px 30px #0004;
-}
-
-.ui-sidebar {
-  width: 23%;
-  background: #8bd9ce3b;
-  border-radius: 4px;
-}
-
-.ui-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.ui-content i {
-  height: 6px;
-  background: #b2e9df66;
-  border-radius: 4px;
-}
-
-.ui-content i:first-child {
-  width: 55%;
-  height: 9px;
-  background: #b2e9df;
-}
-
-.ui-panels {
-  display: flex;
-  gap: 7px;
-  flex: 1;
-}
-
-.ui-panels b {
-  flex: 1;
-  background: #8bd9ce25;
-  border: 1px solid #8bd9ce42;
-  border-radius: 4px;
-}
+/* PROJECT INFORMATION */
 
 .project-info {
   padding: 22px;
@@ -764,6 +688,56 @@ a {
   margin-bottom: 8px;
 }
 
+/* PROJECT 3 - PORTRAIT 3:4 */
+
+.project-card--portrait .project-image-container {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  position: relative;
+  background: #090b12;
+}
+
+.project-card--portrait .project-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* PROJECT 4 - CENTERED */
+
+.projects-grid .project-card--video {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* PROJECT 4 - LANDSCAPE VIDEO 16:9 */
+
+.project-card--video .project-image-container {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  position: relative;
+  background: #090b12;
+}
+
+.project-card--video video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #090b12;
+}
+
+/* CERTIFICATES */
+
 .certificate-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -778,6 +752,25 @@ a {
   border: 1px solid var(--line);
   background: var(--surface);
   border-radius: 14px;
+}
+
+.certificate-image-container {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.certificate-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .3s ease;
+}
+
+.certificate-card:hover .certificate-img {
+  transform: scale(1.05);
 }
 
 .certificate-icon {
@@ -820,6 +813,8 @@ a {
   margin-top: 5px;
 }
 
+/* CONTACT */
+
 .contact-panel {
   text-align: center;
   padding: 70px 25px;
@@ -852,6 +847,8 @@ a {
   margin-top: 28px;
 }
 
+/* FOOTER */
+
 .footer {
   min-height: 90px;
   display: flex;
@@ -867,6 +864,8 @@ a {
   color: var(--muted);
 }
 
+/* SCROLL REVEAL */
+
 .reveal {
   opacity: 0;
   transform: translateY(18px);
@@ -877,6 +876,8 @@ a {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* TABLET */
 
 @media (max-width: 900px) {
   .nav-links {
@@ -907,6 +908,8 @@ a {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* MOBILE */
 
 @media (max-width: 650px) {
   .container {
@@ -1046,7 +1049,26 @@ a {
   .certificate-card {
     padding: 18px;
   }
+
+  /* PROJECT 3 MOBILE */
+  .project-card--portrait .project-image-container {
+    aspect-ratio: 3 / 4;
+  }
+
+  /* PROJECT 4 MOBILE */
+  .projects-grid .project-card--video {
+    width: 100%;
+    max-width: 100%;
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+
+  .project-card--video .project-image-container {
+    aspect-ratio: 16 / 9;
+  }
 }
+
+/* ACCESSIBILITY */
 
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -1060,125 +1082,5 @@ a {
   .reveal {
     opacity: 1;
     transform: none;
-  }
-}
-
-.project-image-container {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1.65;
-  overflow: hidden;
-  background-color: #15172b;
-}
-
-.project-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  display: block;
-  transition: transform 0.3s ease;
-}
-
-.project-card:hover .project-img {
-  transform: scale(1.03);
-}
-
-.project-badge {
-  position: absolute;
-  top: 15px;
-  left: 16px;
-  z-index: 2;
-  color: #ffffff;
-  font: 9px var(--display);
-  letter-spacing: 1.5px;
-  background: rgba(9, 11, 18, 0.7);
-  backdrop-filter: blur(4px);
-  padding: 4px 8px;
-  border-radius: 4px;
-  border: 1px solid var(--line);
-}
-.certificate-image-container {
-  width: 100%;
-  aspect-ratio: 16 / 9; /* Mengatur rasio otomatis menjadi 16:9 */
-  overflow: hidden;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-
-.certificate-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.certificate-card:hover .certificate-img {
-  transform: scale(1.05); /* Efek zoom tipis saat kursor diarahkan ke kartu */
-}
-/* VIDEO PROJECT LANDSCAPE 16:9 */
-.video-landscape {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  position: relative;
-  background: #090b12;
-}
-
-.video-landscape video {
-  display: block;
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: contain;
-  background: #090b12;
-}
-
-/* =================================
-   PENYESUAIAN PROJECT PORTOFOLIO
-================================= */
-
-/* Project 4: Posisi di tengah */
-.projects-grid .project-card:nth-child(4) {
-  grid-column: 1 / -1;
-  width: min(100%, 560px);
-  justify-self: center;
-}
-
-/* Video Project 4: Landscape 16:9 */
-.projects-grid .project-card:nth-child(4) .project-image-container {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  height: auto;
-  overflow: hidden;
-  background: #090b12;
-}
-
-.projects-grid .project-card:nth-child(4) video {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  background: #090b12;
-}
-
-/* Project 3: Gambar Portrait 3:4 */
-.projects-grid .project-card:nth-child(3) .project-image-container {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  height: auto;
-  overflow: hidden;
-  background: #090b12;
-}
-
-.projects-grid .project-card:nth-child(3) .project-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* Responsif untuk HP */
-@media (max-width: 600px) {
-  .projects-grid .project-card:nth-child(4) {
-    width: 100%;
   }
 }
