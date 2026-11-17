@@ -1,3 +1,4 @@
+
 /* FADEL RAHMAT — DARK MODERN PORTFOLIO */
 
 :root {
@@ -1098,9 +1099,10 @@ a {
   border-radius: 4px;
   border: 1px solid var(--line);
 }
+
 .certificate-image-container {
   width: 100%;
-  aspect-ratio: 16 / 9; /* Mengatur rasio otomatis menjadi 16:9 */
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 8px;
   margin-bottom: 1rem;
@@ -1111,9 +1113,11 @@ a {
   height: 100%;
   object-fit: cover;
 }
+
 .certificate-card:hover .certificate-img {
-  transform: scale(1.05); /* Efek zoom tipis saat kursor diarahkan ke kartu */
+  transform: scale(1.05);
 }
+
 /* VIDEO PROJECT LANDSCAPE 16:9 */
 .video-landscape {
   width: 100%;
@@ -1160,7 +1164,14 @@ a {
   background: #090b12;
 }
 
-/* Project 3: Gambar Portrait 3:4 */
+/* Project 3: Portrait 3:4 dan posisi di tengah */
+.projects-grid .project-card:nth-child(3) {
+  grid-column: 1 / -1;
+  width: 100%;
+  max-width: 560px;
+  justify-self: center;
+}
+
 .projects-grid .project-card:nth-child(3) .project-image-container {
   width: 100%;
   aspect-ratio: 3 / 4;
